@@ -48,12 +48,10 @@ contract RentalAgreement {
         
     }
     
-            function kill(){
-               if (msg.sender == apartmentOwner && now > rentalDate && rentPaid == false && keySent == true && keyReceived == true){
-                   suicide(apartmentOwner);
-               }
-        
+function kill(){
+    if(msg.sender == apartmentOwner){
+        suicide(apartmentOwner);
     }
-    
+}  
     
 }
