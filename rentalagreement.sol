@@ -55,7 +55,7 @@ contract RentalAgreement {
     //function through which owner can set the key to decrypt the door access code    
 
     function setKey(string _decryptionPassword) {
-               if (msg.sender == apartmentOwner && now <= rentalDate && rentRecieved == true){
+               if (msg.sender == apartmentOwner && now <= rentalDate && rentReceived == true){
                    decryptionPassword = _decryptionPassword;
                    keyReceived = true;
                    msg.sender.send(this.balance);
